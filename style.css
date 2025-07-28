@@ -1,0 +1,126 @@
+/* Elzero 12 */
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #eeeeee;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 1200px;
+  padding: 55px 15px 15px 15px;
+  margin: 50px auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container div {
+  background-color: white;
+  width: calc(96% / 3);
+  padding: 35px 25px 40px 25px;
+  border: 1px solid #d9d9d9;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: box-shadow 1s;
+  -webkit-transition: box-shadow 1s;
+  -moz-transition: box-shadow 1s;
+  -ms-transition: box-shadow 1s;
+  -o-transition: box-shadow 1s;
+}
+
+.container div:hover {
+  box-shadow: 0 0 100px 0px black;
+}
+
+.container div:first-child,
+.container div:nth-child(2) {
+  margin-right: 2%;
+}
+
+.container div:nth-child(2) {
+  position: relative;
+}
+
+.container div:nth-child(2)::before {
+  content: "Most Popular";
+  background-color: #197beb;
+  color: white;
+  font-weight: bold;
+  width: 75%;
+  height: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: calc(-4% - 2px);
+  z-index: 1;
+}
+
+.container div:nth-child(2)::after {
+  content: "";
+  background-color: #0b56ac;
+  height: 4.3%;
+  width: 85%;
+  position: absolute;
+  top: -4.3%;
+  clip-path: polygon(0% 100%, 100% 100%, 94.15% 0%, 5.85% 0%);
+}
+
+p {
+  margin: 15px;
+}
+
+.service-name {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.service-price {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #197beb;
+  position: relative;
+}
+
+.service-price sup {
+  font-size: 27px;
+  position: absolute;
+  top: 7px;
+  left: -17px;
+}
+
+.service-price span {
+  font-size: 1.25rem;
+  font-weight: initial;
+  color: #939393;
+}
+
+.service-price ~ p {
+  color: #939393;
+}
+
+.service-price ~ p span {
+  font-weight: bold;
+  color: #898989;
+}
+
+button {
+  background-color: #197beb;
+  color: white;
+  font-weight: bold;
+  width: 130px;
+  height: 50px;
+  border: initial;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  margin-top: 20px;
+  cursor: pointer;
+}
